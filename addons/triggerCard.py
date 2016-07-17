@@ -1,3 +1,7 @@
+# Anki Addon for triggering event when flashcard is presented.
+# Put in $home/Documents/Anki/addon (Linux distro)
+# Read the docs for where to put this python file if you aren't running Linux.
+
 import time
 
 from anki.hooks import wrap
