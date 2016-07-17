@@ -13,12 +13,15 @@ from screen import screen
 from drawstuff import *
 
 study_time = int(time.time())
+print(study_time)
+
+eeg_fname='../data/eeg_{}.csv'.format(study_time)
+word_fname = '../data/words_{}.csv'.format(study_time)
 
 words = get_words()
-words.to_csv('../data/words_{}'.format(study_time))
+words.to_csv(word_fname)
 
-# fname='../data/eeg_{}.csv'.format(study_time)
-# collector = CSVCollector(port='/dev/ttyUSB0', fname=fname)
+# collector = CSVCollector(port='/dev/ttyUSB0', fname=eeg_fname)
 
 # collector.start()
 # collector.tag(0)
