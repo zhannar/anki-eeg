@@ -3,25 +3,27 @@ from pygame.locals import *
 from constants import *
 import time
 from csv_collector import CSVCollector
-
-study_time = int(time.time())
-
-fname='../data/eeg_data_{}.csv'.format(study_time)
-collector = CSVCollector(port='/dev/ttyUSB0', fname=fname)
-
-collector.start()
-collector.tag(0)
-time.sleep(2)
+from extract_words import get_words
+import pandas as pd
 
 pygame.init()
+pygame.mouse.set_visible(False)
 
 from screen import screen
 from drawstuff import *
 
-from words import words
+study_time = int(time.time())
 
+words = get_words()
+words.to_csv('../data/words_{}'.format(study_time))
 
-pygame.mouse.set_visible(False)
+# fname='../data/eeg_{}.csv'.format(study_time)
+# collector = CSVCollector(port='/dev/ttyUSB0', fname=fname)
+
+# collector.start()
+# collector.tag(0)
+# time.sleep(2)
+
 
 def check_for_escape():
     while True:
@@ -34,22 +36,25 @@ def check_for_escape():
 def finish_stuff(early=False):
     return
 
+for i in xrange(words.shape[0]):
+    d = dict(words.ix[i])
 
-for word in words:
+    word = d['word']
+
     simple_slide(word)
-    collector.tag(word)
+    # collector.tag(word)
     time.sleep(2)
 
     if check_for_escape():
         finish_stuff(early=True)
-        collector.stop()
+        # collector.stop()
         exit()
 
     focus_slide()
-    collector.tag('focus')
+    # collector.tag('focus')
     time.sleep(0.5)
 
     if check_for_escape():
         finish_stuff(early=True)
-        collector.stop()
+        # collector.stop()
         exit()
