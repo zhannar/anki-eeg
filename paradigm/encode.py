@@ -42,6 +42,9 @@ def finish_stuff(early=False):
 for i in xrange(words.shape[0]):
     d = dict(words.ix[i])
 
+    if d['is_shown'] != 1:
+        continue
+
     word = d['word']
 
     simple_slide(word)
