@@ -14,7 +14,7 @@ final["is_shown"] = 0
 ids = list(final["id"])
 is_shown = list(final["is_shown"])
 
-for x in range(0,239):   
+for x in range(0,len(ids)):   
     if ids[x] in words_120:
         is_shown[x] = 1
 
