@@ -34,7 +34,7 @@ def focus_slide():
     draw_focus_screen()
     pygame.display.flip()
 
-    
+
 def simple_slide(text, size=100):
     screen.fill(background_color)
     p = screen.get_rect().center
@@ -53,3 +53,12 @@ def text_slide(text, size=30):
         y += height
     pygame.display.flip()
 
+def recognize_slide(word, size=100):
+    screen.fill(background_color)
+    p = screen.get_rect().center
+    draw_text(word, p, size=size)
+
+    draw_text("1=unknown", (200, SCREEN_HEIGHT-100), size=50)
+    draw_text("4=recognized", (SCREEN_WIDTH-250, SCREEN_HEIGHT-100), size=50)
+
+    pygame.display.flip()
