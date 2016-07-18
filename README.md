@@ -1,25 +1,40 @@
 # anki-eeg
+
 Using EEG recording, we train a classifier to predict the success of memory encoding of information. Currently, we are using a random selection of words from the English Language. Extensions of this experiment can involve phone numbers, pictures, sound, and other stimuli.
 
-The inspiration for this project was from the abstract: [Improving Memory Performance Using a Wearable BCI](http://doi.org/10.3217/978-3-85125-467-9-128) presented at the [2016 International BCI Society Meeting](http://bcisociety.org/meetings/bci-meeting-2016-abstracts-2/)
+The inspiration for this project was from the abstract: [Improving Memory Performance Using a Wearable BCI](http://doi.org/10.3217/978-3-85125-467-9-128) presented at the [2016 International BCI Society Meeting](http://bcisociety.org/meetings/bci-meeting-2016-abstracts-2/). Our hopes are to first replicate this study, and then apply the processing and analytic pipeline for easy integration with Anki.
+
+[Anki](http://ankisrs.net/) is a flashcard application that is opensource. It was developed in a way to allow for easy creation of 'addons' to extend the base app. The addon we are building will trigger a timestamp event to the EEG datastream for epoching data used for building the classifer.
 
 Word list and word features was randomly  generated from the [Paivio et al. Word List Generator](http://www.datavis.ca/online/paivio/).
 
-## How to Run
 
-### Stimulus Presentation + Recording
+
+### Experimental Procedure Outline
+
+-   Attach OpenBCI to participant's head.
+-   Record positions of EEG according to 10-20 system.
+-   Have participant sit in chair in front of monitor
+-   Run OpenBCI processing sketch to 'test' connections
+-   Present list of words. (`encode.py`)
+-   Wait 4-5 minutes before recall test (Listen to Rite of Spring or other way to kill the time)
+-   Start Recall Procedure `recognize.py`
+
+### How to Run
+
+#### Stimulus Presentation + Recording
 - `cd paradigm` 
 - Run `python encode.py`
 - This will start the csv collection (watch out for hardcoded usb paths inside `encode.py`) 
 - This will start the Pygame presentation of the words while recording data in csv file in `data` directory
 
-### Recall
+#### Recall
 - `cd paradigm`
 - `python recognize.py`
 
 
 
-More Info on [Improving Memory Performance Using a Wearable BCI](http://doi.org/10.3217/978-3-85125-467-9-128): 
+### More Info on [Improving Memory Performance Using a Wearable BCI](http://doi.org/10.3217/978-3-85125-467-9-128): 
 
 ```
 Corroborating previous studies [1,2,3], averaging over multiple EEG trials of the
