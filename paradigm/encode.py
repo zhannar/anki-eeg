@@ -21,11 +21,11 @@ word_fname = '../data/words_{}.csv'.format(study_time)
 words = get_words()
 words.to_csv(word_fname)
 
-# collector = CSVCollector(port='/dev/ttyUSB0', fname=eeg_fname)
+collector = CSVCollector(port='/dev/ttyUSB0', fname=eeg_fname)
 
-# collector.start()
-# collector.tag(0)
-# time.sleep(2)
+collector.start()
+collector.tag(0)
+time.sleep(4)
 
 
 def check_for_escape():
@@ -48,19 +48,19 @@ for i in xrange(words.shape[0]):
     word = d['word']
 
     simple_slide(word)
-    # collector.tag(word)
-    time.sleep(2)
+    collector.tag(word)
+    time.sleep(2.0)
 
     if check_for_escape():
         finish_stuff(early=True)
-        # collector.stop()
+        collector.stop()
         exit()
 
     focus_slide()
-    # collector.tag('focus')
+    collector.tag('focus')
     time.sleep(0.5)
 
     if check_for_escape():
         finish_stuff(early=True)
-        # collector.stop()
+        collector.stop()
         exit()
