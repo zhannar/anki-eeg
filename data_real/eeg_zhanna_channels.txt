@@ -1,0 +1,9 @@
+1468798457
+1 O1
+2 O2
+3 O1 but more left, almost T5
+4 T3
+5 T6
+6 F8
+7 F7
+8 FP1-2
