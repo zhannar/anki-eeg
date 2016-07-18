@@ -29,7 +29,9 @@ versus well encoded words. Moreover, signal amplitudes from 1.5 to 2s after the 
 parietal/occipital electrodes were significantly different between the two conditions 
 ```
 [1](http://www.sciencedirect.com/science/article/pii/S1053811915010460) Schneider SL, Rose M. Intention to encode boosts memory-related pre-stimulus EEG beta power. NeuroImage. 125: 978-87, 2016.
+
 [2](https://www.researchgate.net/profile/Simon_Hanslmayr/publication/239071542_How_brain_oscillations_form_memories_-_a_processing_based_perspective_on_oscillatory_subsequent_memory_effects/links/00b495285a483db58d000000.pdf) Hanslmayr S, Staudigl T. How brain oscillations form memories-a processing based perspective on oscillatory subsequent memory
 effects. Neuroimage. 85:648-55, 2014.
+
 [3](http://www.weizmann.ac.il/neurobiology/labs/dudai/uploads/files/Cohen_et_al_2014.pdf) Cohen N, Pell L, Edelson MG, Ben-Yakov A, Pine A, Dudai Y. Peri-encoding predictors of memory encoding and consolidation.
 Neuroscience & Biobehavioral Reviews. 50:128-42, 2015.
