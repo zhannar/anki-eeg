@@ -1,6 +1,8 @@
 # anki-eeg
 
-Using EEG recording, we train a classifier to predict the success of memory encoding of information. Currently, we are using a random selection of words from the English Language. Extensions of this experiment can involve phone numbers, pictures, sound, and other stimuli.
+Using EEG recording, we train a classifier to predict the success of memory encoding of information. See [this post](http://lambdaloop.github.io/predicting-memory-encoding-using-openbci) for more details on setup and analysis.
+
+Currently, we are using a random selection of words from the English Language. Extensions of this experiment can involve phone numbers, pictures, sound, and other stimuli.
 
 The inspiration for this project was from the abstract: [Improving Memory Performance Using a Wearable BCI](http://doi.org/10.3217/978-3-85125-467-9-128) presented at the [2016 International BCI Society Meeting](http://bcisociety.org/meetings/bci-meeting-2016-abstracts-2/). Our hopes are to first replicate this study, and then apply the processing and analytic pipeline for easy integration with Anki.
 
